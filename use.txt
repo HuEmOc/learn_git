@@ -18,7 +18,7 @@ C2. Create Project Laravel by cmd
 	b2: logout tk, login lai-> mo cmd
 	b3: htdocs -> shift + right click -> open command windown here -< gõ lenh sau do cài dat laravel voi tên 
 		project là (MyLaravel)
-
+ 
        composer create-project --prefer-dist laravel/laravel MyLaravel
 
 
