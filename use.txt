@@ -1,0 +1,26 @@
+1. Create a new repository -> make url :https://github.com/HuEmOc/learn_git
+2. Clone it to your computer : 
+	gitbash: git clone dia_chi [only the first time]
+3. git add filename  [ git add folder/filename]
+	gitbash: git add demo   or git add demo/readme.txt
+4. git commit -m "message commit"
+5. push it from your computer to Github
+	gitbash: git push
+
+
+
+C1: Create Project Laravel by Git/Gitbash
+	1. gitbash : php -v  [xem version php]
+	2. composer  [ xem da cai dat composer hay chua]
+	3. composer create-project --prefer-dist laravel/laravel MyLaravel
+C2. Create Project Laravel by cmd
+	b1: tao composer
+	b2: logout tk, login lai-> mo cmd
+	b3: htdocs -> shift + right click -> open command windown here -< gõ lenh sau do cài dat laravel voi tên 
+		project là (MyLaravel)
+
+       composer create-project --prefer-dist laravel/laravel MyLaravel
+
+
+Note: Review date status commit
+	gitbash: git reflog --date=iso
