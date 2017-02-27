@@ -1,3 +1,17 @@
+
+
+<style>
+    body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .dropdown-submenu:hover>a {
+        background: red;
+    }
+</style>
+
+
+
 <!-- header -->
 <div class="notifyjs-corner" style="top: 0px; right: 0px;">
     <div class="notifyjs-wrapper notifyjs-hidable">
@@ -60,20 +74,40 @@
                         <ul>
                             <li class="@yield('trangchu')"><a href="{!! url('/phone') !!}">Home </a> </li>
                             <li> <a href="#">Introduce</a> </li>
-                            <li class="@yield('sanpham')"> <a href="{!! url('san-pham') !!}">Product<i class="fa fa-caret-down"></i></a>
-                                <ul>
-                                    <?php $menus = DB::table('categories')->select('id','name','alias','parent_id')->where('parent_id',0)->orderBy('id','DESC')->get(); ?>
-                                    @foreach ($menus as $menu)
-                                        <li><a href="{!! url('danh-muc',[$menu->alias]) !!}">{!! $menu->name !!}</a>
-                                            <?php $parent = DB::table('categories')->select('id','name','alias','parent_id')->where('parent_id',$menu->id)->orderBy('id','DESC')->get(); ?>
-                                            <ul>
-                                                @foreach($parent as $parents)
-                                                    <li><a href="{!! url('category',[$parents->alias]) !!}"><?php echo $parents->name ?></a></li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                    @endforeach
+                           <!-- <li class="@yield('sanpham')"> <a href="{!! url('san-pham') !!}">Product<i class="fa fa-caret-down"></i></a>-->
+                            <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#">Product<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu"><a href="#">Oppo</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Second level link</a>
+                                            </li>
+                                            <li><a href="#">Second level link</a>
+                                            </li>
+                                            <li><a href="#">Second level link</a>
+                                            </li>
+                                            <li><a href="#">Second level link</a>
+                                            </li>
+                                            <li><a href="#">Second level link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"> <a href="#">Samsung</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Second level link1</a>
+                                            </li>
+                                            <li><a href="#">Second level link1</a>
+                                            </li>
+                                            <li><a href="#">Second level link1</a>
+                                            </li>
+                                            <li><a href="#">Second level link1</a>
+                                            </li>
+                                            <li><a href="#">Second level 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
                                 </ul>
+                            </li>
                             </li>
                         </ul>
                         <ul>

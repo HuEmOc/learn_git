@@ -24,6 +24,8 @@ class PhoneController extends Controller
         $product_sells = Product::all();
         return view('frontend.index', compact('product_news', 'product_sales', 'product_sells'));
         // return view('frontend.index')->with(['product_news'=>$product_news,'product_sales'=>$product_sales]);
+        //$product_list = Product::all();
+
     }
 
     /**

@@ -6,9 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-        <style>
-            body { padding-top: 30px; }
-        </style>
+
     </head>
     <body  ng-app="phoneApp" ng-controller="searchController">
     <div class="container">
