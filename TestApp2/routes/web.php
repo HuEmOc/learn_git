@@ -26,3 +26,6 @@ Route::resource('admin','MemberController');
 
 Route::post('upload/image' , 'MemberController@uploadImage');
 
+Route::get('test','MemberController@test');
+
+

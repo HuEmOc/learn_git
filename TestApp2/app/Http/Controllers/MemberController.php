@@ -10,10 +10,12 @@ class MemberController extends Controller
 
     public function index()
     {
+        /*
         return Response::json([
             'data' => 'Le Phi',
             'result' => 'dsadas'
         ]);
+        */
     }
 
     public function main()
@@ -85,7 +87,6 @@ class MemberController extends Controller
 
     }
 
-
     public function update(Request $request, $id)
     {
         $member = member::find($id);
@@ -100,6 +101,12 @@ class MemberController extends Controller
     {
        $member = member::find($id)->delete();
         return Response::json(['records' => $member]);
+    }
+
+
+    public function test()
+    {
+        return view('uploadImage');
     }
 
 }
